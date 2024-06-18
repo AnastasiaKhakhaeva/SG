@@ -40,9 +40,6 @@ df_FX_by_Ticker = pd.DataFrame(list(currencies.items()), columns=['Ticker', 'Cur
 
 
 # currency
-tickers_df = pd.read_excel('tickers_list.xlsx') 
-tickers = tickers_df['Ticker'].tolist() 
-
 FX_df = pd.read_excel('FX_list.xlsx') 
 FX = FX_df['Currency'].tolist() 
 downloaded_FX = yf.download(FX, start=start_date, end=end_date, repair=True)
